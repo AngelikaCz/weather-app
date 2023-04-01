@@ -19,6 +19,14 @@ weatherForm.addEventListener("submit", (event) => {
       view += `<div class="weather__info">`;
       //icon
       view += `<div class="weather__icon"><img src="${dataFromApi.current.condition.icon}" alt="${dataFromApi.current.condition.text}"></div>`;
+      //temperature
+      view += `<div class="weather__temp">${dataFromApi.current.temp_c}<span>&deg;C</span></div>`;
+      //details
+      view += `<div class="weather__details">
+                <p>The amount of rainfall: ${dataFromApi.current.precip_mm}mm </p>
+                <p>Humidity: ${dataFromApi.current.humidity}%</p>
+                <p>Wind: ${dataFromApi.current.wind_kph}km/h</p>
+            </div>`;
 
       view += `</div>`;
 

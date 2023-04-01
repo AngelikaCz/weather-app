@@ -26,9 +26,43 @@
     text-align: center;
     outline: none;
     background-color: $weatherFormBgColor;
+    margin: 0 0 40px 0;
 
     &::placeholder {
       color: $weatherFormColor;
     }
+  }
+
+  &__info {
+    padding: 30px;
+    background-color: #00000075;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+  }
+
+  &__temp {
+    font-size: 60px;
+    display: flex;
+
+    span {
+      font-size: 20px;
+      margin: 6px 0 0 0;
+    }
+  }
+
+  &__details {
+
+    p {
+      margin: 0 0 5px 0;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+
   }
 }
