@@ -321,8 +321,7 @@ h6 {
           user-select: none;
 }
 .weather__form {
-  max-width: 400px;
-  width: 100%;
+  width: min(100% - 30px, 500px);
 }
 .weather__city {
   width: 100%;
