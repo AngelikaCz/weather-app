@@ -1,5 +1,6 @@
 .weather {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -11,5 +12,24 @@
     color: $weatherTitleColor;
     letter-spacing: 4px;
     user-select: none;
+  }
+
+  &__form {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  &__city {
+    width: 100%;
+    line-height: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    outline: none;
+    background-color: $weatherFormBgColor;
+
+    &::placeholder {
+      color: $weatherFormColor;
+    }
   }
 }
