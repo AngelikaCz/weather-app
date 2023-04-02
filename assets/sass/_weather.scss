@@ -40,8 +40,8 @@
 
   &__info {
     padding: 30px;
-    background-color: #00000075;
-    color: #fff;
+    background-color: $weatherInfoBgColor;
+    color: $weatherInfoColor;
     border-radius: 10px;
     display: flex;
     align-items: center;
