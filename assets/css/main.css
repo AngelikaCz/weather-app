@@ -323,6 +323,11 @@ h6 {
 .weather__form {
   width: min(100% - 30px, 500px);
 }
+@media (max-width: 768px) {
+  .weather__form {
+    max-width: 300px;
+  }
+}
 .weather__city {
   width: 100%;
   line-height: 30px;
@@ -361,6 +366,16 @@ h6 {
           align-items: center;
   gap: 15px;
 }
+@media (max-width: 768px) {
+  .weather__info {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 300px;
+  }
+}
 .weather__temp {
   font-size: 60px;
   display: -webkit-box;
@@ -376,4 +391,10 @@ h6 {
 }
 .weather__details p:last-of-type {
   margin: 0;
+}
+@media (max-width: 768px) {
+  .weather__details {
+    width: 100%;
+    text-align: center;
+  }
 }
