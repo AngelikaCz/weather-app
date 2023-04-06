@@ -1,16 +1,19 @@
 let weatherForm = document.querySelector(".weather__form");
 let inputCity = document.querySelector(".weather__city");
 let apiDataContainer = document.querySelector(".weather__data");
+let loader = document.querySelector(".weather__loader");
 
 let apiUrl =
   "https://api.weatherapi.com/v1/current.json?key=8da6b9c86b1c4721bcf131252230104&aqi=yes&q=";
 
 weatherForm.addEventListener("submit", (event) => {
+  showLoader();
   let city = inputCity.value;
   let fullApiUrl = apiUrl + city;
 
   fetch(fullApiUrl)
     .then((response) => {
+      hideLoader();
       if (response.status === 200) {
         return response.json();
       }
@@ -48,4 +51,11 @@ weatherForm.addEventListener("submit", (event) => {
 
 let showError = () => {
   apiDataContainer.innerHTML = `<div class="weather__error"> City not found or issues with API </div>`;
+};
+
+let showLoader = () => {
+  loader.style.display = "block";
+};
+let hideLoader = () => {
+  loader.style.display = "none";
 };

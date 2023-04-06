@@ -406,6 +406,9 @@ h6 {
   letter-spacing: 2px;
   font-weight: 700;
 }
+.weather__loader {
+  display: none;
+}
 
 .lds-ring {
   display: inline-block;
