@@ -405,6 +405,7 @@ h6 {
   color: #fff;
   letter-spacing: 2px;
   font-weight: 700;
+  border-radius: 5px;
 }
 .weather__loader {
   display: none;
