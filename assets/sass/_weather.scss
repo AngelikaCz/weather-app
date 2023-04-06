@@ -81,4 +81,13 @@
     }
 
   }
+
+  &__error {
+    background-color: #e61212;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 700;
+  }
 }

@@ -10,7 +10,12 @@ weatherForm.addEventListener("submit", (event) => {
   let fullApiUrl = apiUrl + city;
 
   fetch(fullApiUrl)
-    .then((response) => response.json())
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json();
+      }
+      throw new Error("API Error");
+    })
     .then((dataFromApi) => {
       // console.log(dataFromApi.current.temp_c);
       let view = ``;
@@ -31,7 +36,16 @@ weatherForm.addEventListener("submit", (event) => {
       view += `</div>`;
 
       apiDataContainer.innerHTML = view;
+    })
+    .catch((error) => {
+      showError();
     });
 
   event.preventDefault();
 });
+
+// Show error function
+
+let showError = () => {
+  apiDataContainer.innerHTML = `<div class="weather__error"> City not found or issues with API </div>`;
+};
