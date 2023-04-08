@@ -44,7 +44,9 @@
     color: $weatherInfoColor;
     border-radius: 10px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 15px;
 
     @include forSmartphone {
@@ -65,8 +67,11 @@
     }
   }
 
-  &__location {
+  &__location-date {
+    width: 100%;
     color: #fff;
+    font-size: 22px;
+    text-align: center;
   }
 
   &__details {

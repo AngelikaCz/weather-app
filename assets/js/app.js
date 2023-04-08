@@ -25,8 +25,22 @@ weatherForm.addEventListener("submit", (event) => {
       // view += `In ${dataFromApi.location.name} today is ${dataFromApi.current.temp_c} degrees Celcius.`;
 
       view += `<div class="weather__info">`;
-      //location
-      view += `<div class="weather__location">${dataFromApi.location.name}<span>, </span>${dataFromApi.location.country}"></div>`;
+      //location & date
+
+      // Date function
+      let days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      let datestring = dataFromApi.location.localtime;
+      let d = new Date(datestring);
+      let dayName = days[d.getDay()];
+      view += `<div class="weather__location-date">${dayName}, ${dataFromApi.location.name}<span>, </span>${dataFromApi.location.country}</div>`;
       //icon
       view += `<div class="weather__icon"><img src="${dataFromApi.current.condition.icon}" alt="${dataFromApi.current.condition.text}"></div>`;
       //temperature
@@ -62,6 +76,7 @@ let hideLoader = () => {
   loader.style.display = "none";
 };
 
+// For mobile app
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
     navigator.serviceWorker
