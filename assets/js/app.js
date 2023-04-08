@@ -25,6 +25,8 @@ weatherForm.addEventListener("submit", (event) => {
       // view += `In ${dataFromApi.location.name} today is ${dataFromApi.current.temp_c} degrees Celcius.`;
 
       view += `<div class="weather__info">`;
+      //location
+      view += `<div class="weather__location">${dataFromApi.location.name}<span>, </span>${dataFromApi.location.country}"></div>`;
       //icon
       view += `<div class="weather__icon"><img src="${dataFromApi.current.condition.icon}" alt="${dataFromApi.current.condition.text}"></div>`;
       //temperature
