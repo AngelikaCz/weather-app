@@ -69,7 +69,7 @@
 
   &__location-date {
     width: 100%;
-    color: #fff;
+    color: $weatherInfoColor;
     font-size: 22px;
     text-align: center;
   }
@@ -92,10 +92,10 @@
   }
 
   &__error {
-    background-color: #e61212;
+    background-color: $weatherErrorBgColor;
     padding: 15px;
     text-align: center;
-    color: #fff;
+    color: $weatherErrorColor;
     letter-spacing: 2px;
     font-weight: 700;
     border-radius: 5px;
